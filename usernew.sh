@@ -38,7 +38,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/ndmservice/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -56,7 +56,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/ndmservice/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -73,7 +73,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/ndmservice/permission/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -156,7 +156,7 @@ echo -e "UDPGW      : 7100-7300"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
-echo -e "${BICyan} Wings Premium VPN Auto Script Service${NC}" 
+echo -e "${BICyan} NDM Premium Auto Script Service${NC}" 
 
 else
 
@@ -181,7 +181,7 @@ echo -e "UDPGW      : 7100-7300"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
-echo -e "${BICyan} Wings Premium VPN Auto Script Service${NC}" 
+echo -e "${BICyan} NDM Premium Auto Script Service${NC}" 
 fi
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
