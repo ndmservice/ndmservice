@@ -1,8 +1,8 @@
 # NDM Service V2
 
-# UPDATE Untuk Debian
+# UPDATE Debian
 apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
-# UPDATE Untuk Ubuntu
+# UPDATE Ubuntu
 apt update && apt upgrade -y && update-grub && sleep 2 && reboot
 # Installation
 <pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/ndmservice/ndmservice/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
